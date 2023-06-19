@@ -8,36 +8,6 @@
         justify-content: space-around;
         align-items: center;
     }
-    .money__block{
-        display: flex;
-        width: 100px;
-        justify-content: space-around;
-        .money{
-            display: flex;
-            font-size: 25px;
-            color: #fff;
-            margin-left: 10px;
-        }      
-        .money__title{
-            font-size: 25px;
-            color: #fff;
-        }
-    }
-    .level__block{
-        display: flex;
-        width: 100px;
-        justify-content: space-around;
-        .level{
-            display: flex;
-            font-size: 25px;
-            color: #fff;
-            margin-left: 10px;
-        }      
-        .level__title{
-            font-size: 25px;
-            color: #fff;
-        }
-    }
-    
+   
 
 }
