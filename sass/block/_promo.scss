@@ -1,0 +1,21 @@
+.promo{
+    min-height: 420px;
+    padding-top: 200px;
+    &__header{
+        background-color: #bebebe;
+    }
+    &__wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        &-img{
+            width: 50px;
+        }
+        &-descr{
+            color: #a5a5a5;
+            margin-top: 10px;
+        }
+    }
+}
