@@ -4,8 +4,9 @@
     top: 0;
     width: 300px;
     height: 100vh;
-    background-color: #fff;
+    background: linear-gradient(89.6deg, rgb(84, 90, 175) 21.52%, rgb(88, 114, 231) 100%);
     transition: 0.3s all;
+    z-index: 10;
     &.active{
         left: 0;
     }
@@ -14,8 +15,46 @@
         position: absolute;
         top: 15px;
         right: 15px;
+        cursor: pointer;
         img{
             width: 100%;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        padding: 90px 0;
+        justify-content: center;
+        align-items: center;
+        &-link{
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            width: 300px;
+            justify-content: center;
+            color: #000;
+            &:hover{
+                background-color: red;
+                text-align: center;
+            }
+            img{
+                width: 25px;
+                margin-right: 15px;
+            }
+        }
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        visibility: hidden;
+        opacity: .3;
+        &.active{
+            z-index: -5;
+            visibility: visible;
         }
     }
 }

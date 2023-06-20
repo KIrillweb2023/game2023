@@ -57,7 +57,7 @@ a{
     background-color: rgb(240, 240, 240);
     .money__block{
         display: flex;
-        width: 100px;
+        width: 120px;
         justify-content: space-around;
         .money{
             display: flex;
@@ -65,12 +65,21 @@ a{
             margin-left: 10px;
         }      
         .money__title{
-            font-size: 25px;
+            width: 40px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 20px;
+            img{
+                width: 100%;
+                margin-right: 5px;
+            }
         }
     }
     .level__block{
         display: flex;
-        width: 100px;
+        width: 120px;
         justify-content: space-around;
         .level{
             display: flex;
@@ -78,7 +87,16 @@ a{
             margin-left: 10px;
         }      
         .level__title{
-            font-size: 25px;
+            width: 40px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 20px;
+            img{
+                width: 100%;
+                margin-right: 5px;
+            }
         }
     }
 }
@@ -96,5 +114,5 @@ progress::-webkit-progress-value {
     background: linear-gradient(89.6deg, rgba(84, 90, 175, 0.85) 21.52%, rgba(88, 114, 231, 0.548) 100%);
 }
 progress::-webkit-progress-bar{
-    background: #a3a3a3;
+    background: #d1d1d1;
 }

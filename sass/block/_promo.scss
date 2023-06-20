@@ -2,10 +2,6 @@
     min-height: 420px;
     padding-top: 300px;
     position: relative;
-    &__header{
-        background-color: #bebebe;
-    }
-    
     &__wrapper{
         width: 100%;
         display: flex;
@@ -16,7 +12,7 @@
             width: 50px;
         }
         &-descr{
-            color: #a5a5a5;
+            color: #acacac;
             margin-top: 10px;
         }
     }
