@@ -1,11 +1,14 @@
 @import 'block/header';
 @import 'block/promo';
+@import 'block/menu';
 
 
 
 @import 'block/footer';
 
-
+::-webkit-scrollbar{
+    width: 0;
+}
 *{
     padding: 0;
     margin: 0;
@@ -31,6 +34,13 @@ a{
     display: block;
     margin: 0 auto;
 }
+.hamburger{
+    width: 40px;
+    cursor: pointer;
+    img{
+        width: 100%;
+    }
+}
 
 .blocks{
     padding: 10px;
@@ -40,7 +50,7 @@ a{
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    width: 400px;
+    width: 500px;
     justify-content: space-around;
     box-shadow: 0 8px 8px rgba(128, 128, 128, 0.548);
     border-radius: 5px;
@@ -71,4 +81,20 @@ a{
             font-size: 25px;
         }
     }
+}
+progress{
+    width: 420px;
+    height: 3px;
+    border-radius: 10px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+progress::-webkit-progress-value {
+    background: linear-gradient(89.6deg, rgba(84, 90, 175, 0.85) 21.52%, rgba(88, 114, 231, 0.548) 100%);
+}
+progress::-webkit-progress-bar{
+    background: #a3a3a3;
 }
