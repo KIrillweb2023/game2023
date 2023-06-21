@@ -2,6 +2,8 @@
 @import 'block/promo';
 @import 'block/menu';
 
+@import 'block/profile';
+
 
 
 @import 'block/footer';
@@ -23,10 +25,15 @@ a{
 .logo{
     display: flex;
     align-items: center;
+    width: 185px;
+    justify-content: space-between;
     .logo__title{
         font-size: 25px;
         color: #fff;
         font-family: 'Lobster', cursive;
+    }
+    img{
+        width: 40px;
     }
 }
 .container{
@@ -42,70 +49,83 @@ a{
     }
 }
 
-.blocks{
-    padding: 10px;
-    margin-top: 50px;
+.card{
+    margin-top: 20px;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    width: 500px;
+    width: 370px;
+    height: 200px;
+    border-radius: 15px;
+    background: url('../img/Titanium.jpg') center (center / cover) no-repeat;
     justify-content: space-around;
     box-shadow: 0 8px 8px rgba(128, 128, 128, 0.548);
-    border-radius: 5px;
-    background-color: rgb(240, 240, 240);
-    .money__block{
+    .circle{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background: #ffffffd7;
+        position: absolute;
+        top: 25px;
+        left: 50px;
+    }
+    .circle_blur{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background: #ffffffa1;
+        position: absolute;
+        top: 25px;
+        left: 30px;
+    }
+    .number{
+        width: 310px;
         display: flex;
-        width: 120px;
-        justify-content: space-around;
-        .money{
-            display: flex;
-            font-size: 25px;
-            margin-left: 10px;
-        }      
-        .money__title{
-            width: 40px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            font-weight: 700;
-            font-size: 20px;
-            img{
-                width: 100%;
-                margin-right: 5px;
-            }
+        justify-content: space-between;
+        position: absolute;
+        top: 110px;
+        span{
+            font-size: 16px;
+            font-family: 'Credit Card';
+            color: #fff;
         }
     }
-    .level__block{
-        display: flex;
-        width: 120px;
-        justify-content: space-around;
-        .level{
-            display: flex;
-            font-size: 25px;
+    .money{
+        position: absolute;
+        bottom: 25px;
+        left: 30px;
+        color: #fff;
+        font-size: 25px;
+        span{
             margin-left: 10px;
-        }      
-        .level__title{
-            width: 40px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            font-weight: 700;
-            font-size: 20px;
-            img{
-                width: 100%;
-                margin-right: 5px;
-            }
         }
+    }
+    .date{
+        color: #fff;
+        font-size: 14px;
+        position: absolute;
+        right: 30px;
+        bottom: 25px;
+        font-family: 'Credit Card';
+    }
+    .title{
+        font-size: 25px;
+        font-weight: 700;
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        color: #fff;
     }
 }
+
 progress{
     width: 420px;
     height: 3px;
     border-radius: 10px;
     position: absolute;
-    top: 100px;
+    top: 300px;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 20px;
@@ -116,3 +136,5 @@ progress::-webkit-progress-value {
 progress::-webkit-progress-bar{
     background: #d1d1d1;
 }
+
+
