@@ -1,32 +1,44 @@
 let config = {
-    number: 0,
+    money: 0,
     defaultUnitLevel: 0
 };
 
+const scaleProgress = {
+    scale: 100
+}
 
-
-
-const clickNum = document.getElementById('#click-score');
-const level = document.getElementById('#click-EXP');
 const section = document.querySelector('.promo');
-const progress = document.querySelector('progress');
-
-const moneyProfile = document.getElementById('#money-profile');
 
 
 section.addEventListener('click', (e) =>{
-    const target = e.target;
-    config.number += 1;
-
-
-    if(target && target.classList.contains('promo') || target.classList.contains('promo__wrapper')){
-    }
-
-    clickNum.innerHTML = config.number;
+    lastLevel();
+    farmMoney();
 });
 
 
+function lastLevel(){
+    const progress = document.querySelector('progress');
+    const level = document.getElementById('#level');
 
+    if(progress.value != scaleProgress.scale){
+        progress.value += 2;
+        if(progress.value == scaleProgress.scale){
+            config.defaultUnitLevel += 1;
+        } else {
+            config.defaultUnitLevel += 0;
+        }
+    } else {
+        progress.value = 0
+    }
+
+    level.innerHTML = config.defaultUnitLevel;
+}
+
+function farmMoney(){
+    const clickNum = document.getElementById('#click-score');
+    config.money += 1;
+    clickNum.innerHTML = config.money;
+}
 
 
 // menu

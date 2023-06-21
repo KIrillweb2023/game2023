@@ -50,11 +50,8 @@ a{
 }
 
 .card{
+    position: relative;
     margin-top: 20px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     width: 370px;
     height: 200px;
@@ -119,22 +116,4 @@ a{
         color: #fff;
     }
 }
-
-progress{
-    width: 420px;
-    height: 3px;
-    border-radius: 10px;
-    position: absolute;
-    top: 300px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px;
-}
-progress::-webkit-progress-value {
-    background: linear-gradient(89.6deg, rgba(84, 90, 175, 0.85) 21.52%, rgba(88, 114, 231, 0.548) 100%);
-}
-progress::-webkit-progress-bar{
-    background: #d1d1d1;
-}
-
 
