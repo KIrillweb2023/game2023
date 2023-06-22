@@ -4,17 +4,18 @@ let config = {
 };
 
 const scaleProgress = {
-    scale: 100
+    scale: 100,
 }
 
 const section = document.querySelector('.promo');
 
-
-section.addEventListener('click', (e) =>{
-    lastLevel();
-    farmMoney();
-});
-
+if(section){   
+    section.addEventListener('click', () =>{
+        lastLevel();
+        farmMoney();
+        farmLevel();
+    });
+}
 
 function lastLevel(){
     const progress = document.querySelector('progress');
@@ -30,9 +31,18 @@ function lastLevel(){
     } else {
         progress.value = 0
     }
-
     level.innerHTML = config.defaultUnitLevel;
 }
+
+function farmLevel(){
+    if(config.defaultUnitLevel >= 7){
+        config.money += 10;
+    }
+}
+
+
+
+
 
 function farmMoney(){
     const clickNum = document.getElementById('#click-score');
@@ -57,6 +67,39 @@ close.addEventListener('click', () =>{
     menu.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
+});
+
+const tab = document.querySelectorAll('.tabheader__item');
+const parentTab = document.querySelector('.tabheader__items');
+const tabcontent = document.querySelectorAll('.tabcontent');
+
+function visibleOffTab(){
+    tabcontent.forEach(item =>{
+        item.classList.remove('show');
+        item.classList.add('hide');
+    });
+    tab.forEach(item =>{
+        item.classList.remove('tabheader__item_active')
+    });
+}
+function visibleOnTab(i = 0){
+    tabcontent[i].classList.add('show', 'fade');
+    tabcontent[i].classList.remove('hide');
+    tab[i].classList.add('tabheader__item_active');
+}
+visibleOffTab();
+visibleOnTab();
+
+parentTab.addEventListener('click', (event) =>{
+    const target = event.target;
+    if(target && target.classList.contains('tabheader__item')){
+        tab.forEach((item, i) =>{
+            if(target == item){
+                visibleOffTab();
+                visibleOnTab(i);
+            }
+        });
+    }
 });
 
 

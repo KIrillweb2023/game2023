@@ -1,0 +1,38 @@
+.catalog{
+    .tabcontainer{
+        .tabcontent{
+            
+        }
+        .tabheader{
+            &__items{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin-top: 50px;
+            }
+            &__item{
+                width: 150px;
+                height: 100px;
+                background: url('../img/catalog/Reef.jpg') center (center / cover) no-repeat;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 10px;
+                img{
+                    width: 50px;
+                    margin-top: 10px;
+                }
+                .title{
+                    font-size: 14px;
+                    color: #fff;
+                    font-weight: 700;
+                    margin-top: 5px;
+                    text-align: center;
+                }
+            }
+        }
+       
+    }
+    
+}

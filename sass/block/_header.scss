@@ -8,4 +8,10 @@
         justify-content: space-around;
         align-items: center;
     }
+    &__input{
+        width: 500px;
+        input{
+            width: 100%;
+        }
+    }
 }
