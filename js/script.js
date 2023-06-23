@@ -83,7 +83,7 @@ function visibleOffTab(){
     });
 }
 function visibleOnTab(i = 0){
-    tabcontent[i].classList.add('show', 'fade');
+    tabcontent[i].classList.add('show');
     tabcontent[i].classList.remove('hide');
     tab[i].classList.add('tabheader__item_active');
 }
