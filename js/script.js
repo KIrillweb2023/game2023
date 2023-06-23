@@ -4,7 +4,7 @@ let config = {
 };
 
 const scaleProgress = {
-    scale: 100,
+    scale: 10,
 }
 
 const section = document.querySelector('.promo');
@@ -17,6 +17,8 @@ if(section){
     });
 }
 
+const levelText = document.querySelector('.text');
+
 function lastLevel(){
     const progress = document.querySelector('progress');
     const level = document.getElementById('#level');
@@ -25,11 +27,13 @@ function lastLevel(){
         progress.value += 2;
         if(progress.value == scaleProgress.scale){
             config.defaultUnitLevel += 1;
+            lvlBtn.classList.add('active');
+            levelText.classList.remove('noneText');
         } else {
             config.defaultUnitLevel += 0;
         }
     } else {
-        progress.value = 0
+        progress.value = 0;
     }
     level.innerHTML = config.defaultUnitLevel;
 }
@@ -39,9 +43,18 @@ function farmLevel(){
         config.money += 10;
     }
 }
+const lvlBtn = document.querySelector('.card_btn');
+if(lvlBtn){
+    clickBtn();           
+}
 
-
-
+function clickBtn(){
+    lvlBtn.addEventListener('click', () =>{
+        config.money += 100;
+        lvlBtn.classList.remove('active');
+        levelText.classList.add('noneText');
+    });
+}   
 
 
 function farmMoney(){
@@ -101,7 +114,6 @@ parentTab.addEventListener('click', (event) =>{
         });
     }
 });
-
 
 
 

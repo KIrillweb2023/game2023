@@ -9,6 +9,43 @@
 
 
 @import 'block/footer';
+
+
+.card_btn{
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #e6dada, #274046);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 5px 5px 5px #cecece;
+    margin-top: 10px;
+    position: absolute;
+    top: 150px;
+    left: 785px;
+    z-index: 1;
+    transition: 0.6s all;
+    cursor: pointer;
+    img{
+        width: 25px;
+        margin-left: 5px;
+    }
+    &.active{
+        top: 230px;
+    }
+}
+
+.noneText{
+    opacity: 0;
+}
+.showText{
+    opacity: 1;
+}
+
 .hide{
     display: none;
 }
@@ -67,6 +104,7 @@ a{
 }
 
 .card{
+    z-index: 2;
     position: relative;
     margin-top: 20px;
     display: flex;
