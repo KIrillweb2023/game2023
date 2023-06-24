@@ -1,0 +1,187 @@
+@media (max-width: 1200px){
+    .promo{
+        &_wrapper{
+            flex-wrap: wrap;
+            .level{
+                height: 115px;
+                progress{
+                    margin-top: 5px;
+                }
+                .text{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px){
+
+}
+@media (max-width: 768px){
+    .promo{
+        
+        &_wrapper{
+            flex-wrap: wrap;
+            padding: 0;
+            .level{
+                height: 95px;
+                progress{
+                    margin-top: 5px;
+                }
+                .text{
+                    margin-top: 10px;
+                }
+                .level_farm{
+                    margin-top: 10px;
+                }
+            }
+            .card{
+                height: 180px;
+                .number{
+                    top: 95px;
+                }
+            }
+        }
+    }
+    .footer{
+        &__wrapper{
+            padding: 0 100px;
+        }
+    }
+}
+@media (max-width: 567px){
+    .promo{ 
+        &_wrapper{
+            flex-wrap: wrap;
+            padding: 0;
+            .level{
+                height: 95px;
+                progress{
+                    margin-top: 5px;
+                }
+                .text{
+                    margin-top: 10px;
+                }
+                .level_farm{
+                    margin-top: 10px;
+                }
+            }
+            .card{
+                height: 180px;
+                .number{
+                    top: 95px;
+                }
+            }
+        }
+    }
+    .footer{
+        &__wrapper{
+            padding: 0 50px;
+        }
+    }
+   
+}
+@media (max-width: 480px){
+    .header{
+        &__wrapper{
+            justify-content: space-between;
+            padding: 0 10px;
+            .logo{
+                width: 160px;
+                justify-content: space-between;
+                .logo__title{
+                    font-size: 20px;
+                    color: #fff;
+                    font-family: 'Lobster', cursive;
+                }
+                img{
+                    width: 40px;
+                }
+            }
+        }
+        .hamburger{
+            img{
+                width: 30px;
+            }
+        }
+    }
+    .promo{ 
+        &_wrapper{
+            flex-wrap: wrap;
+            padding: 0;
+            .level{
+                width: 260px;
+                height: 70px;
+                progress{
+                    margin-top: 5px;
+                    width: 260px;
+                }
+                .text{
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+                .level_farm{
+                    margin-top: 10px;
+                    span{
+                        font-size: 14px;
+                    }
+                }
+                &__title{
+                    font-size: 18px;
+                }
+                .card_btn{
+                    width: 260px;
+                    font-size: 14px;
+                    margin-top: -45px;
+                    &.active{
+                        margin-top: 30px;
+                    }
+                }
+            }
+            .card{
+                height: 170px;
+                width: 300px;
+                .number{
+                    top: 95px;
+                    width: 260px;
+                    span{
+                        font-size: 14px;
+                    }
+                }
+                .money{
+                    img{
+                        width: 25px;
+                    }
+                    span{
+                        font-size: 16px;
+                    }
+                    .date{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        &__wrapper{
+            &-descr{
+                font-size: 14px;
+            }
+            &-img{
+                width: 30px;
+            }
+        }
+    }
+    .footer{
+        &__wrapper{
+            padding: 0 10px;
+            &-item{
+                a{
+                    font-size: 14px;
+                }
+                img{
+                    width: 30px;
+                }
+            }
+        }
+    }
+   
+}
