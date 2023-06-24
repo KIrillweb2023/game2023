@@ -4,7 +4,7 @@ let config = {
 };
 
 const scaleProgress = {
-    scale: 10,
+    scale: 100,
 }
 
 const section = document.querySelector('.promo');
