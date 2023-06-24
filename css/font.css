@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Credit Card';
     font-weight: 400;
-    src: 
+    src:  
+        local('Credit Card'),
         url('../fonts/CreditCard.ttf') format('ttf');
 }
