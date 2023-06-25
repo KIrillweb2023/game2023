@@ -4,16 +4,20 @@ let config = {
 };
 
 const scaleProgress = {
-    scale: 10,
+    scale: 100,
 }
 
-const section = document.querySelector('.promo');
 
+
+
+const section = document.querySelector('.promo');
 if(section){   
     section.addEventListener('click', () =>{
         lastLevel();
         farmMoney();
         farmLevel();
+
+
     });
 }
 
@@ -64,6 +68,8 @@ function farmMoney(){
 }
 
 
+
+
 // menu
 
 const open = document.querySelector('.hamburger');
@@ -85,35 +91,61 @@ close.addEventListener('click', () =>{
 const tab = document.querySelectorAll('.tabheader__item');
 const parentTab = document.querySelector('.tabheader__items');
 const tabcontent = document.querySelectorAll('.tabcontent');
+const tabcontainer = document.querySelector('.tabcontainer');
 
-function visibleOffTab(){
-    tabcontent.forEach(item =>{
-        item.classList.remove('show');
-        item.classList.add('hide');
-    });
-    tab.forEach(item =>{
-        item.classList.remove('tabheader__item_active')
-    });
-}
-function visibleOnTab(i = 0){
-    tabcontent[i].classList.add('show');
-    tabcontent[i].classList.remove('hide');
-    tab[i].classList.add('tabheader__item_active');
-}
-visibleOffTab();
-visibleOnTab();
-
-parentTab.addEventListener('click', (event) =>{
-    const target = event.target;
-    if(target && target.classList.contains('tabheader__item')){
-        tab.forEach((item, i) =>{
-            if(target == item){
-                visibleOffTab();
-                visibleOnTab(i);
-            }
+if(tabcontainer){
+    function visibleOffTab(){
+        tabcontent.forEach(item =>{
+            item.classList.remove('show');
+            item.classList.add('hide');
+        });
+        tab.forEach(item =>{
+            item.classList.remove('tabheader__item_active')
         });
     }
-});
+    function visibleOnTab(i = 0){
+        tabcontent[i].classList.add('show');
+        tabcontent[i].classList.remove('hide');
+        tab[i].classList.add('tabheader__item_active');
+    }
+    visibleOffTab();
+    visibleOnTab();
+    
+    parentTab.addEventListener('click', (event) =>{
+        const target = event.target;
+        if(target && target.classList.contains('tabheader__item')){
+            tab.forEach((item, i) =>{
+                if(target == item){
+                    visibleOffTab();
+                    visibleOnTab(i);
+                }
+            });
+        }
+    });
+}
+
+
+// manual
+
+const manual = document.querySelector('.manual');
+const closeBtn = document.querySelector('.manual__block-close');
+
+if(manual){
+    function showModal(){
+        manual.classList.remove('hide');
+    
+        closeBtn.addEventListener('click', () =>{
+            manual.classList.add('hide');
+        });
+    }
+    setTimeout(()=>{
+        showModal();
+    }, 1000);
+}
+
+    
+    
+    
 
 
 

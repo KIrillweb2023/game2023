@@ -3,11 +3,8 @@
 @import 'block/menu';
 @import 'block/catalog';
 @import 'block/settings';
-
 @import 'block/profile';
-
-
-
+@import 'block/manual';
 @import 'block/footer';
 
 @import 'block/media';
@@ -41,20 +38,7 @@ a{
         text-decoration: underline;
     }
 }
-.logo{
-    display: flex;
-    align-items: center;
-    width: 185px;
-    justify-content: space-between;
-    .logo__title{
-        font-size: 25px;
-        color: #fff;
-        font-family: 'Lobster', cursive;
-    }
-    img{
-        width: 40px;
-    }
-}
+
 .container{
     max-width: 1200px;
     display: block;
@@ -67,87 +51,18 @@ a{
         width: 100%;
     }
 }
-.line{
-    width: 100%;
-    height: 10px;
-    border-radius: 10px;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(to right, #36d1dc, #5b86e5); 
-}
 
-.card{
-    z-index: 2;
-    position: relative;
-    margin-top: 20px;
-    display: flex;
-    width: 370px;
-    height: 200px;
-    border-radius: 15px;
-    background: url('../img/Titanium.jpg') center (center / cover) no-repeat;
-    justify-content: space-around;
-    box-shadow: 0 8px 8px rgba(128, 128, 128, 0.548);
-    .circle{
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        background: #ffffffd7;
-        position: absolute;
-        top: 25px;
-        left: 50px;
-    }
-    .circle_blur{
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        background: #ffffffa1;
-        position: absolute;
-        top: 25px;
-        left: 30px;
-    }
-    .number{
-        width: 310px;
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        top: 110px;
-        span{
-            font-size: 16px;
-            font-family: 'Credit Card';
-            color: #fff;
-        }
-    }
-    .money{
-        position: absolute;
-        bottom: 20px;
-        left: 30px;
-        color: #fff;
-        font-size: 25px;
-        display: flex;
-        align-items: center;
-        span{
-            margin-left: 10px;
-        }
-        img{
-            width: 30px;
-        }
-    }
-    .date{
-        color: #fff;
-        font-size: 14px;
-        position: absolute;
-        right: 30px;
-        bottom: 25px;
-        font-family: 'Credit Card';
-    }
-    .title{
-        font-size: 25px;
-        font-weight: 700;
-        position: absolute;
-        right: 30px;
-        top: 25px;
-        color: #fff;
+
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade{
+    from {
+        opacity: 0.1;
+    } to {
+        opacity: 1;
     }
 }
 

@@ -15,3 +15,17 @@
         }
     }
 }
+.logo{
+    display: flex;
+    align-items: center;
+    width: 185px;
+    justify-content: space-between;
+    .logo__title{
+        font-size: 25px;
+        color: #fff;
+        font-family: 'Lobster', cursive;
+    }
+    img{
+        width: 40px;
+    }
+}
