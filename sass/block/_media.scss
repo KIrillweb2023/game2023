@@ -17,14 +17,22 @@
             }
         }
     }
-   
+    .catalog{
+        .tabcontainer{
+            .tabheader{
+                &__item{
+                 
+
+                }
+            }
+        }
+    }
 }
 @media (max-width: 992px){
 
 }
 @media (max-width: 768px){
     .promo{
-        
         &_wrapper{
             flex-wrap: wrap;
             padding: 0;
@@ -51,6 +59,11 @@
     .footer{
         &__wrapper{
             padding: 0 100px;
+        }
+    }
+    .manual{
+        &__block{
+            width: 400px;
         }
     }
 }
@@ -84,7 +97,11 @@
             padding: 0 50px;
         }
     }
-   
+    .manual{
+        &__block{
+            width: 350px;
+        }
+    }
 }
 @media (max-width: 480px){
     .header{
@@ -115,11 +132,11 @@
             flex-wrap: wrap;
             padding: 0;
             .level{
-                width: 260px;
+                width: 310px;
                 height: 70px;
                 progress{
                     margin-top: 5px;
-                    width: 260px;
+                    width: 310px;
                 }
                 .text{
                     margin-top: 10px;
@@ -144,8 +161,8 @@
                 }
             }
             .card{
-                height: 170px;
-                width: 300px;
+                height: 185px;
+                width: 350px;
                 .number{
                     top: 95px;
                     width: 260px;
@@ -188,5 +205,31 @@
             }
         }
     }
-   
+    .manual{
+        &__block{
+            width: 300px;
+            padding: 75px 20px;
+        }
+    }
+}
+@media (max-width: 400px){
+    .promo{
+        .level{
+            width: 250px;
+        }
+        .card{
+            height: 170px;
+            width: 290px;
+        }
+    }
+    .manual{
+        padding-top: 180px;
+        &__block{
+            padding: 30px 20px;
+            width: 245px;
+            &-descr{
+                font-size: 14px;
+            }
+        }
+    }
 }

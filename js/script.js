@@ -3,6 +3,7 @@ let config = {
     defaultUnitLevel: 0
 };
 
+
 const scaleProgress = {
     scale: 100,
 }
@@ -16,8 +17,6 @@ if(section){
         lastLevel();
         farmMoney();
         farmLevel();
-
-
     });
 }
 
